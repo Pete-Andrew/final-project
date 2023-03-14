@@ -1,0 +1,25 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "Final project for the front end javascript bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pete-Andrew/final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pete-Andrew/final-project/issues"
+  },
+  "homepage": "https://github.com/Pete-Andrew/final-project#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.9.0"
+  }
+}
