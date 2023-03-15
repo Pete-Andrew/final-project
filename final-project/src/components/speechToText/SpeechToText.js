@@ -3,7 +3,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./speechToText.css"; 
 
-//from https://www.npmjs.com/package/react-speech-recognition#basic-example 
+//from documentation on https://www.npmjs.com/package/react-speech-recognition#basic-example 
 const SpeechToText = () => {
   const {
     transcript,
