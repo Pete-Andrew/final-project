@@ -12,6 +12,3 @@ npm i react-speech-recognition --legacy-peer-deps
 npm install semantic-ui-react semantic-ui-css --legacy-peer-deps
 npm install --save react-translate --legacy-peer-deps
 npm i openai --legacy-peer-deps
-
-Dall-E api Key
-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
