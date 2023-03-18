@@ -1,14 +1,16 @@
 import "./App.css";
 // import Translate from "./components/google-translate/Translate";
-import SpeechToText from "./components/speechToText/SpeechToText";
+// import SpeechToText from "./components/speechToText/SpeechToText";
 // import SpeechToImage from "./components/SpeechToImage/SpeechToImage";
 // import { render } from "react-dom";
 // import { useState } from "react";
 
 import React from "react";
+
 import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import { InputBox } from "./InputBox";
+import SpeechToText from "./components/speechToText/SpeechToText";
 
 const configuration = new Configuration({
   apiKey: process.env.REACT_APP_API_KEY,
@@ -39,8 +41,8 @@ function App() {
       <SpeechToText />
 
       <InputBox label={"Description"} setAttribute={setUserPrompt} />
-      {/* <InputBox label={"Amount"} setAttribute={setNumber} />
-      <InputBox label={"Size"} setAttribute={setSize} /> */}
+      {/* <InputBox label={"Amount"} setAttribute={setNumber} /> */}
+      {/* <InputBox label={"Size"} setAttribute={setSize} /> */}
       <button className="main-button" onClick={() => generateImage()}>
         Generate
       </button>

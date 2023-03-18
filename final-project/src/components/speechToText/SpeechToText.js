@@ -20,7 +20,7 @@ const SpeechToText = () => {
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
       <button onClick={resetTranscript}>Reset</button>
-      <p>{transcript}</p>
+      <p>Text: {transcript}</p>
       
         {/* < PromptFetcher transcript={transcript} /> */}
     </div>
