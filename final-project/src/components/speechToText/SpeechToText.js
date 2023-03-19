@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import "./speechToText.css";
 
 // import PromptFetcher from "./PromptFetcher";
 
