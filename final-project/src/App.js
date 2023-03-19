@@ -1,5 +1,5 @@
 import "./App.css";
-// import Translate from "./components/google-translate/Translate";
+
 // import SpeechToText from "./components/speechToText/SpeechToText";
 // import SpeechToImage from "./components/SpeechToImage/SpeechToImage";
 // import { render } from "react-dom";
@@ -14,6 +14,7 @@ import SpeechToText from "./components/speechToText/SpeechToText";
 
 const configuration = new Configuration({
   //src folder needs to contain a .env file containing your open ai API key, use the following format in the .env file: REACT_APP_API_KEY="yourAPIkeyHere"
+  // https://platform.openai.com/account/api-keys
   apiKey: process.env.REACT_APP_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
