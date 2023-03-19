@@ -50,7 +50,7 @@ function App() {
       {/* <InputBox label={"Amount"} setAttribute={setNumber} /> */}
       {/* <InputBox label={"Size"} setAttribute={setSize} /> */}
       <button className="main-button" onClick={() => generateImage()}>
-        Generate
+        Create Magic <i class="fa-sharp fa-solid fa-wand-sparkles"></i>
       </button>
     </main>
   );
