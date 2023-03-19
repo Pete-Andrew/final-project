@@ -32,11 +32,17 @@ const SpeechToText = ({label, setAttribute}) => {
 
   return (
     <div>
-      <p>Microphone: {listening ? "on" : "off"}</p>
-      <button onClick={SpeechRecognition.startListening}>Start</button>
-      <button onClick={stop}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
-      <p >Text: {transcript}</p>
+      <div className="micBox">
+        <p>Microphone: <span> {listening ? "on" : "off"} </span></p>
+      </div>
+
+      <button className="my-btn" onClick={SpeechRecognition.startListening}><i class="fa-sharp fa-solid fa-microphone"></i> Start</button>
+      <button className="my-btn" onClick={stop}><i class="fa-sharp fa-solid fa-microphone-slash"></i> Stop</button>
+      <button className="my-btn" onClick={resetTranscript}><i class="fa-solid fa-trash-can"></i> Reset</button>
+      
+      <div className="transcriptBox">
+        <p className="textBox"> Text: {transcript}</p>
+      </div>
 
       {/* < PromptFetcher transcript={transcript} /> */}
     </div>
