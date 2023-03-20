@@ -55,7 +55,9 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
       </button>
 
       <div className="transcriptBox">
-        <p>Audio Text: {transcript}</p>
+        <p>Audio Text Output:</p>
+        <p> {transcript}</p>
+        <p>if it's not quite how you want it you can edit your audio input below...</p>
         <input className="textBox" onChange={typeInput} value = {userPrompt} /> 
       </div>
 
