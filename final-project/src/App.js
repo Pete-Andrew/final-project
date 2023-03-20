@@ -13,6 +13,7 @@ import SpeechToText from "./components/speechToText/SpeechToText";
 
 //src folder needs to contain a .env file containing your open ai API key, use the following format in the .env file: REACT_APP_API_KEY="yourAPIkeyHere"
 // https://platform.openai.com/account/api-keys
+//Configuration is a constructor that is passed the values of the API key. - CHECK THIS
 const configuration = new Configuration({
   apiKey: process.env.REACT_APP_API_KEY,
 });
