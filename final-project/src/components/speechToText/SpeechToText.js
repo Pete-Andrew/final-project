@@ -62,16 +62,18 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
         <p>Enter your API key here:</p>
         <input
           type="password"
-          className="APIinputBox"
+          // className="APIinputBox"
           id="userAPIKey"
           onChange={getUserAPIKey}
           value={localAPIKey}
+          className="textBox flex"
         />
-
+        <br></br>
         <button className="my-btn" onClick={saveAPIKey}>
           {" "}
           thanks for entering your API key!{" "}
         </button>
+
         <p>Audio Text Output:</p>
         <p className="transcriptOutput"> {transcript}</p>
         <p>
