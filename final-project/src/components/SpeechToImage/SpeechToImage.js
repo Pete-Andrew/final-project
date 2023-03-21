@@ -7,10 +7,10 @@ import "./speechToImage.css";
 //src folder needs to contain a .env file containing your open ai API key, use the following format in the .env file: REACT_APP_API_KEY="yourAPIkeyHere"
 // https://platform.openai.com/account/api-keys
 //Configuration is a constructor that is passed the values of the API key. - CHECK THIS
-const configuration = new Configuration({
-  apiKey: process.env.REACT_APP_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+
+
+
+
 
 function SpeechToImage() {
   //useState is a react hook that declares a “state variable” and allows us to track state in a function component, the values in () are entered as default values.
@@ -20,6 +20,18 @@ function SpeechToImage() {
   const [size, setSize] = useState("256x256");
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const [apiKey, setAPIKey] = useState(process.env.REACT_APP_API_KEY);
+
+  const configuration = new Configuration({
+    //works from local machine with personal API key:
+    
+    apiKey: apiKey,
+ 
+ 
+  });
+  console.log(apiKey, configuration);
+
+  const openai = new OpenAIApi(configuration); 
 
   console.log(openai);
   //the async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
@@ -57,6 +69,7 @@ function SpeechToImage() {
             label={"Description"}
             setAttribute={SetAttributeForUser}
             userPrompt={userPrompt}
+            setAPIKey={setAPIKey}
           />
           <button className="main-button" onClick={() => generateImage()}>
             Create the Magic! <i class="fa-sharp fa-solid fa-wand-sparkles"></i>
