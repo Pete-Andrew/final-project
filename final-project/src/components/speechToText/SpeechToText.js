@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -7,7 +7,8 @@ import "./speechToText.css";
 //from documentation on https://www.npmjs.com/package/react-speech-recognition#basic-example
 //useSpeechRecognition is a React hook that gives a component access to a transcript of speech picked up from the user's microphone.
 //resetTranscript is part of the "react-speech-recognition" as is 'transcript', 'listening' and 'browserSupportsSpeechRecognition'
-const SpeechToText = ({ label, setAttribute, userPrompt }) => {
+const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
+  const [localAPIKey, setLocalAPIKey] = useState("");
   const {
     transcript,
     listening,
@@ -28,6 +29,17 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
     setAttribute(e.target.value);
   };
 
+  function getUserAPIKey(e) {
+    let userAPIKey = e.target.value;
+
+    console.log(userAPIKey);
+    setLocalAPIKey(userAPIKey);
+  }
+
+  function saveAPIKey() {
+    setAPIKey(localAPIKey);
+  }
+
   return (
     <div>
       <div className="micBox">
@@ -47,6 +59,21 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
       </button>
 
       <div className="transcriptBox">
+        <p>Enter your API key here:</p>
+        <input
+          type="password"
+          // className="APIinputBox"
+          id="userAPIKey"
+          onChange={getUserAPIKey}
+          value={localAPIKey}
+          className="textBox flex"
+        />
+        <br></br>
+        <button className="my-btn" onClick={saveAPIKey}>
+          {" "}
+          thanks for entering your API key!{" "}
+        </button>
+
         <p>Audio Text Output:</p>
         <p className="transcriptOutput"> {transcript}</p>
         <p>
@@ -62,4 +89,5 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
     </div>
   );
 };
+
 export default SpeechToText;
