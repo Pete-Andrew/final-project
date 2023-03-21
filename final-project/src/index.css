@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 /* Global Styles */
-:root {
+/* :root {
   --gh-pattern-1: #fff4f9;
   --gh-pattern-2: #ffebf1;
   --gh-pattern-3: #ffe3d7;
@@ -65,7 +65,7 @@
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -85,9 +85,11 @@ body {
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -97,18 +99,23 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.05rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
 }
@@ -229,4 +236,40 @@ code {
   cursor: pointer;
   background-color: #3083DC;
   box-shadow: 5px 6px 0px rgb(0, 0, 0);
+}
+
+.css-selector {
+  background: linear-gradient(270deg, #438bdf, #69ee2c, #0db7a2);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 25s ease infinite;
+  animation: AnimationName 25s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
