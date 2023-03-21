@@ -58,24 +58,12 @@ function SpeechToImage() {
             setAttribute={SetAttributeForUser}
             userPrompt={userPrompt}
           />
-
-          {/* <InputBox label={"Description"} userPrompt = {userPrompt} setAttribute={SetAttributeForUser} /> */}
-          {/* <InputBox label={"Amount"} setAttribute={setNumber} /> */}
-          {/* <InputBox label={"Size"} setAttribute={setSize} /> */}
           <button className="main-button" onClick={() => generateImage()}>
             Create the Magic! <i class="fa-sharp fa-solid fa-wand-sparkles"></i>
           </button>
         </>
       )}
 
-      {/* {imageUrl && <img src={imageUrl} className="image" alt="ai thing" />}
-
-      <SpeechToText label={"Description"} setAttribute={SetAttributeForUser} userPrompt = {userPrompt}/>
-
-
-      <button className="main-button" onClick={() => generateImage()}>
-        Create the Magic! <i class="fa-sharp fa-solid fa-wand-sparkles"></i>
-      </button> */}
     </main>
   );
 }
