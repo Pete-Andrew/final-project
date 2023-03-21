@@ -4,7 +4,6 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import "./speechToText.css";
 
-
 //from documentation on https://www.npmjs.com/package/react-speech-recognition#basic-example
 //useSpeechRecognition is a React hook that gives a component access to a transcript of speech picked up from the user's microphone.
 //resetTranscript is part of the "react-speech-recognition" as is 'transcript', 'listening' and 'browserSupportsSpeechRecognition'
@@ -27,7 +26,7 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
 
   const typeInput = (e) => {
     setAttribute(e.target.value);
-  }
+  };
 
   return (
     <div>
@@ -50,10 +49,16 @@ const SpeechToText = ({ label, setAttribute, userPrompt }) => {
       <div className="transcriptBox">
         <p>Audio Text Output:</p>
         <p className="transcriptOutput"> {transcript}</p>
-        <p>if it's not quite how you want it you can edit your audio input below...</p>
-        <input className="textBox flex" onChange={typeInput} value = {userPrompt} /> 
+        <p>
+          if it's not quite how you want it you can edit your audio input
+          below...
+        </p>
+        <input
+          className="textBox flex"
+          onChange={typeInput}
+          value={userPrompt}
+        />
       </div>
-     
     </div>
   );
 };
