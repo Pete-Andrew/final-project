@@ -17,10 +17,10 @@ from {
 } */
 
 .image {
-  
-  margin-top: 82vh;
+
+  margin-top: 100vh;
   border: 0.5rem solid black;
-  
+
 }
 
 .main-button {
@@ -30,6 +30,6 @@ from {
 
 .header {
 
-  margin-top:  30vh;
+  margin-top: 30vh;
 
 }

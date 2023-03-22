@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url("../src/components/images/large-blue-circuit-board.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {

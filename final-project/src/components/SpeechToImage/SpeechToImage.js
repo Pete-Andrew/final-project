@@ -60,7 +60,7 @@ function SpeechToImage() {
   return (
     <main className="App">
       {loading ? (
-        <h1 id="loading" class="glow">Loading...</h1>
+        <h1 id="loading" className="glow">Loading...</h1>
       ) : (
         <>
 
