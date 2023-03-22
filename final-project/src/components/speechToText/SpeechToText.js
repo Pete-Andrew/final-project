@@ -33,7 +33,7 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
   function getUserAPIKey(e) {
     let userAPIKey = e.target.value;
 
-    console.log(userAPIKey);
+    // console.log(userAPIKey);
     setLocalAPIKey(userAPIKey);
   }
 

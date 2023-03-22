@@ -29,11 +29,11 @@ function SpeechToImage() {
  
  
   });
-  console.log(apiKey, configuration);
+  // console.log(apiKey, configuration);
 
   const openai = new OpenAIApi(configuration); 
 
-  console.log(openai);
+  // console.log(openai);
   //the async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
   //the generate image function creates a const 'image parameters' contaning an object with the neccessary variables for image creation.
   const generateImage = async () => {
