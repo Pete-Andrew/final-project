@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bc0a4350.css",
+    "main.js": "/static/js/main.01525b53.js",
+    "static/media/large-blue-circuit-board.jpg": "/static/media/large-blue-circuit-board.4532f507f8b04d8c3e38.jpg",
+    "index.html": "/index.html",
+    "main.bc0a4350.css.map": "/static/css/main.bc0a4350.css.map",
+    "main.01525b53.js.map": "/static/js/main.01525b53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc0a4350.css",
+    "static/js/main.01525b53.js"
+  ]
+}
