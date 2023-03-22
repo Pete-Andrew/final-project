@@ -42,21 +42,17 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
 
   return (
     <div>
-      <div className="micBox">
-        <p>
-          Microphone: <span> {listening ? "on" : "off"} </span>
-        </p>
+      <div className="howToUseDiv">
+       
+          <div className="aboutDiv">
+            <h1>How to use:</h1>
+              <div >This app will take audio prompts and use these to generate an AI image using openAI (Dall-E).</div>
+              <div>Press start to begin recording and stop to end your input.</div>
+              <div>You can then edit the text transcription of your audio at the bottom of the page.</div>
+              <div>Alternatively you can enter your input directly into the bottom field.</div>
+              <div> Finally, press 'Create the magic!'</div>
+          </div>
       </div>
-
-      <button className="my-btn" onClick={SpeechRecognition.startListening}>
-        <i className="fa-sharp fa-solid fa-microphone"></i> Start
-      </button>
-      <button className="my-btn" onClick={stop}>
-        <i className="fa-sharp fa-solid fa-microphone-slash"></i> Stop
-      </button>
-      <button className="my-btn" onClick={resetTranscript}>
-        <i className="fa-solid fa-trash-can"></i> Reset
-      </button>
 
       <div className="transcriptBox">
         <p>Enter your API key here:</p>
@@ -68,17 +64,34 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
           value={localAPIKey}
           className="textBox flex"
         />
-        <br></br>
-        <button className="my-btn" onClick={saveAPIKey}>
+            <br></br>
+        <button id="APIKeyButton" className="my-btn" onClick={saveAPIKey}>
           {" "}
           thanks for entering your API key!{" "}
         </button>
 
-        <p>Audio Text Output:</p>
-        <p className="transcriptOutput"> {transcript}</p>
+        </div>
+
+      <div className="micBox">
+
         <p>
-          if it's not quite how you want it you can edit your audio input
-          below...
+          Microphone: <span> {listening ? "on" : "off"} </span>
+        </p>
+      
+        <button className="my-btn" onClick={SpeechRecognition.startListening}>
+        <i className="fa-sharp fa-solid fa-microphone"></i> Start
+      </button>
+      <button className="my-btn" onClick={stop}>
+        <i className="fa-sharp fa-solid fa-microphone-slash"></i> Stop
+      </button>
+      <button className="my-btn" onClick={resetTranscript}>
+        <i className="fa-solid fa-trash-can"></i> Reset
+      </button>
+
+        <p>Audio Text Output:</p>
+        <p className="transcriptOutput flex"> {transcript}</p>
+        <p>
+          Enter your prompt here OR edit the output from the audio transcript: 
         </p>
         <input
           className="textBox flex"
