@@ -3,6 +3,7 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import "./speechToText.css";
+import "bootstrap";
 
 //from documentation on https://www.npmjs.com/package/react-speech-recognition#basic-example
 //useSpeechRecognition is a React hook that gives a component access to a transcript of speech picked up from the user's microphone.
@@ -42,7 +43,8 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
 
   return (
     <div>
-      <div className="howToUseDiv">
+      
+      <div className="howToUseDiv flex">
         <div className="aboutDiv">
           <h1>How to use:</h1>
           <div>
