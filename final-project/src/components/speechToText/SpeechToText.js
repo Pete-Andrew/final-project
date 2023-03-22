@@ -88,7 +88,7 @@ const SpeechToText = ({ label, setAttribute, userPrompt, setAPIKey }) => {
         <br></br>
         <button id="APIKeyButton" className="my-btn" onClick={saveAPIKey}>
           {" "}
-          thanks for entering your API key!{" "}
+          Click here to submit your API key!{" "}
         </button>
       </div>
 
