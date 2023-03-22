@@ -17,7 +17,7 @@ function SpeechToImage() {
   // useState returns a pair of values: the current state and a function that updates it. see: https://legacy.reactjs.org/docs/hooks-state.html
   const [userPrompt, setUserPrompt] = useState("");
   const [number, setNumber] = useState(1);
-  const [size, setSize] = useState("256x256");
+  const [size, setSize] = useState("512x512");
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [apiKey, setAPIKey] = useState(process.env.REACT_APP_API_KEY);
@@ -63,7 +63,11 @@ function SpeechToImage() {
         <h1 id="loading" class="glow">Loading...</h1>
       ) : (
         <>
-          {imageUrl && <img src={imageUrl} className="image" alt="ai thing" />}
+
+
+        <div className="header"></div>
+
+          {imageUrl && <img src={imageUrl} className="image" alt="ai image" />}
 
           <SpeechToText
             label={"Description"}
@@ -71,7 +75,7 @@ function SpeechToImage() {
             userPrompt={userPrompt}
             setAPIKey={setAPIKey}
           />
-          <button className="main-button" onClick={() => generateImage()}>
+          <button href="#" className="main-button" onClick={() => generateImage()}>
             Create the Magic! <i class="fa-sharp fa-solid fa-wand-sparkles"></i>
           </button>
         </>

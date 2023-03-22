@@ -12,9 +12,9 @@
 }
 
 p {
-  margin: 20px 0px 20px  0px;
-  font-size: 20px;
-  align-content: center;
+    margin: 20px 0px 20px 0px;
+    font-size: 20px;
+    align-content: center;
 }
 
 .micBox {
@@ -22,31 +22,68 @@ p {
     border: 2px solid #9DD1F1;
     border-radius: 5px;
     background-color: #9DD1F1;
-    color: black;
+    color: white;
 }
 
 .transcriptBox {
-    padding: 0px 10px 0px 10px;
+
     border-radius: 5px;
     margin: 20px 0px 20px 0px;
     border: 2px solid #9DD1F1;
     background-color: #9DD1F1;
     font-size: 20px;
+
 }
 
-.textBox { 
-    width: 60vw;
-    height: 6vh; 
+.textBox {
+    width: 50vw;
+    height: 6vh;
     margin-bottom: 2vh;
     text-align: center;
     font-size: 20px;
 }
 
-.transcriptOutput { 
+.transcriptOutput {
 
+    width: 50vw;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
     background-color: white;
     color: black;
     border: 0.5px solid black;
     font-size: 20px;
-    height: 6vh; 
+    height: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.howToUseDiv {
+
+    font-size: 20px;
+    border: 2px solid #9DD1F1;
+    border-radius: 5px;
+    background-color: #9DD1F1;
+    color: rgb(255, 255, 255);
+    margin-top: 4vh;
+
+    /* width: 60vw; */
+    /* height: 2vh;  */
+    margin-bottom: 2vh;
+
+    text-align: center;
+    /* font-size: 20px; */
+}
+
+#APIKeyButton {
+
+    margin-bottom: 2vh;
+
+}
+
+.aboutDiv {
+    margin: 2%;
+}
+
+.anchorTag {
+    color: white;
 }

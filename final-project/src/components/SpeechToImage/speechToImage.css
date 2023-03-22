@@ -17,10 +17,19 @@ from {
 } */
 
 .image {
-  margin-bottom: 3%;
-  margin-top: 32vh;
+  
+  margin-top: 75vh;
+  border: 0.5rem solid black;
+  
 }
 
 .main-button {
   margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.header {
+
+  margin-top:  30vh;
+
 }
